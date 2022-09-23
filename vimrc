@@ -1,3 +1,7 @@
+" Load defaults.vim
+unlet! skip_defaults_vim
+source $VIMRUNTIME/defaults.vim
+
 " Make the invisible visible
 colorscheme default
 set softtabstop=0
@@ -9,7 +13,8 @@ filetype indent on " load filetype-specific indent files
 
 " Make backspace work in insert mode
 " Not sure why this is needed but
-set backspace=2
+" set backspace=2
+" Commenting out to try defaults.vim's config
 
 " Search
 set incsearch

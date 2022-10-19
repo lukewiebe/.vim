@@ -39,11 +39,12 @@ filetype plugin on
 
 " EXPERIMENTAL
 
-" Enable vim-fzf
-set rtp+=/opt/homebrew/opt/fzf
-
 " set <Leader>r command in .pde files to run code in Processing.app
 au FileType arduino nnoremap <Leader>r :w<CR>:!osascript -e 'quit app "Processing"' && open -a Processing % && sleep 2 && osascript -e 'tell application "System Events" to keystroke "r" using {command down}'<CR>
 
 " use fold-indent in .pde files
 au FileType arduino set foldmethod=indent
+au FileType arduino set foldlevel=99
+
+" Undo settings
+set undodir=~/.vim/undo

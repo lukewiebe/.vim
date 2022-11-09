@@ -1,15 +1,16 @@
-" Load defaults.vim
+" Load defaults.vim first
 unlet! skip_defaults_vim
 source $VIMRUNTIME/defaults.vim
 
 " Make the invisible visible
 colorscheme default
-set softtabstop=0
 set mouse=
+set softtabstop=0
 
 syntax on
 set number
 filetype indent on " load filetype-specific indent files
+filetype plugin on " load filetype plugins
 
 " Search
 set incsearch
@@ -33,9 +34,6 @@ runtime macros/matchit.vim
 " source: https://www.youtube.com/watch?v=XA2WjJbmmoM
 set path+=**
 
-" Markdown filetype plugin
-filetype plugin on
-
 
 " EXPERIMENTAL
 
@@ -48,3 +46,8 @@ au FileType arduino set foldlevel=99
 
 " Undo settings
 set undodir=~/.vim/undo
+
+" Set comment syntax highlighting to dark grey instead of default cyan
+highlight Comment ctermfg=darkgrey
+
+" read lines from files in Processing, found using ag and fzf

@@ -49,5 +49,3 @@ set undodir=~/.vim/undo
 
 " Set comment syntax highlighting to dark grey instead of default cyan
 highlight Comment ctermfg=darkgrey
-
-" read lines from files in Processing, found using ag and fzf
